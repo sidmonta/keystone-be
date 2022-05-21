@@ -38,9 +38,9 @@ import { document } from '@keystone-6/fields-document'
 import { Lists } from '.keystone/types'
 
 import ClientSchema from './schemas/client'
-import CompanySchema from './schemas/company'
+import CompanySchema, { companyHooks } from './schemas/company'
 import InstallationSchema from './schemas/installation'
-import MetadataSchema from './schemas/metadata'
+import MetadataSchema, { metadataHooks } from './schemas/metadata'
 
 // We have a users list, a blogs list, and tags for blog posts, so they can be filtered.
 // Each property on the exported object will become the name of a list (a.k.a. the `listKey`),
@@ -153,6 +153,7 @@ export const lists: Lists = {
         initialColumns: ['name', 'email'],
       },
     },
+    hooks: companyHooks
   }),
 
   Client: list({
@@ -175,6 +176,7 @@ export const lists: Lists = {
     fields: MetadataSchema,
     ui: {
       isHidden: true
-    }
+    },
+    hooks: metadataHooks
   })
 }

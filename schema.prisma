@@ -81,19 +81,20 @@ model Installation {
 }
 
 model Metadati {
-  id             String    @id @default(cuid())
-  address        String    @default("")
-  email          String    @default("")
-  housePhone     String    @default("")
-  logo_filesize  Int?
-  logo_extension String?
-  logo_width     Int?
-  logo_height    Int?
-  logo_mode      String?
-  logo_id        String?
-  mobilePhone    String    @default("")
-  officialName   String    @default("")
-  website        String    @default("")
-  other          String?
-  company        Company[] @relation("Company_metadata")
+  id                    String    @id @default(cuid())
+  address               String    @default("")
+  email                 String    @default("")
+  housePhone            String    @default("")
+  companyLogo_filesize  Int?
+  companyLogo_extension String?
+  companyLogo_width     Int?
+  companyLogo_height    Int?
+  companyLogo_mode      String?
+  companyLogo_id        String?
+  logo                  String    @default("")
+  mobilePhone           String    @default("")
+  officialName          String    @default("")
+  website               String    @default("")
+  other                 String?   @default("{}")
+  company               Company[] @relation("Company_metadata")
 }

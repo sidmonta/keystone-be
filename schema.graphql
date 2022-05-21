@@ -606,7 +606,8 @@ type Metadati {
   address: String
   email: String
   housePhone: String
-  logo: ImageFieldOutput
+  companyLogo: ImageFieldOutput
+  logo: String
   mobilePhone: String
   officialName: String
   website: String
@@ -669,6 +670,7 @@ input MetadatiWhereInput {
   address: StringFilter
   email: StringFilter
   housePhone: StringFilter
+  logo: StringFilter
   mobilePhone: StringFilter
   officialName: StringFilter
   website: StringFilter
@@ -686,6 +688,7 @@ input MetadatiOrderByInput {
   address: OrderDirection
   email: OrderDirection
   housePhone: OrderDirection
+  logo: OrderDirection
   mobilePhone: OrderDirection
   officialName: OrderDirection
   website: OrderDirection
@@ -695,7 +698,8 @@ input MetadatiUpdateInput {
   address: String
   email: String
   housePhone: String
-  logo: ImageFieldInput
+  companyLogo: ImageFieldInput
+  logo: String
   mobilePhone: String
   officialName: String
   website: String
@@ -729,7 +733,8 @@ input MetadatiCreateInput {
   address: String
   email: String
   housePhone: String
-  logo: ImageFieldInput
+  companyLogo: ImageFieldInput
+  logo: String
   mobilePhone: String
   officialName: String
   website: String
